@@ -1,2 +1,3 @@
-/* Phase 4 entrypoint now loads the card-free hero, compact mobile sections, and clean drawer navigation. */
+/* Phase 4 entrypoint loads the approved responsive system plus the wide high-fill desktop layout. */
 @import url('ui-phase13.css?v=20260726-10');
+@import url('ui-phase14.css?v=20260726-11');

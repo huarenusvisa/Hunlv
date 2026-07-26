@@ -1,0 +1,67 @@
+{
+  "sources": [
+    {
+      "id": "uscis-alerts",
+      "name": "USCIS Alerts",
+      "url": "https://www.uscis.gov/newsroom/alerts",
+      "authority": "USCIS",
+      "type": "news"
+    },
+    {
+      "id": "uscis-all-news",
+      "name": "USCIS All News",
+      "url": "https://www.uscis.gov/newsroom/all-news",
+      "authority": "USCIS",
+      "type": "news"
+    },
+    {
+      "id": "uscis-family-green-card",
+      "name": "USCIS Green Card for Family Preference Immigrants",
+      "url": "https://www.uscis.gov/green-card/green-card-eligibility/green-card-for-family-preference-immigrants",
+      "authority": "USCIS",
+      "type": "guidance"
+    },
+    {
+      "id": "uscis-immediate-relative",
+      "name": "USCIS Green Card for Immediate Relatives",
+      "url": "https://www.uscis.gov/green-card/green-card-eligibility/green-card-for-immediate-relatives-of-us-citizen",
+      "authority": "USCIS",
+      "type": "guidance"
+    },
+    {
+      "id": "uscis-forms-i130",
+      "name": "USCIS Form I-130",
+      "url": "https://www.uscis.gov/i-130",
+      "authority": "USCIS",
+      "type": "form"
+    },
+    {
+      "id": "uscis-forms-i485",
+      "name": "USCIS Form I-485",
+      "url": "https://www.uscis.gov/i-485",
+      "authority": "USCIS",
+      "type": "form"
+    },
+    {
+      "id": "dos-visa-bulletin",
+      "name": "Department of State Visa Bulletin",
+      "url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin.html",
+      "authority": "U.S. Department of State",
+      "type": "visa-bulletin"
+    },
+    {
+      "id": "federal-register-uscis",
+      "name": "Federal Register USCIS Documents",
+      "url": "https://www.federalregister.gov/agencies/u-s-citizenship-and-immigration-services",
+      "authority": "Federal Register",
+      "type": "rulemaking"
+    }
+  ],
+  "keywords": [
+    "marriage", "spouse", "family", "immediate relative", "family preference",
+    "green card", "adjustment of status", "consular processing", "immigrant visa",
+    "I-130", "I-130A", "I-485", "I-864", "I-693", "I-751", "DS-260",
+    "visa bulletin", "F2A", "CR1", "IR1", "conditional permanent resident",
+    "婚姻", "配偶", "婚姻绿卡", "家庭移民", "调整身份", "领事程序", "排期"
+  ]
+}

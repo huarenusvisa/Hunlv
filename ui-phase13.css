@@ -1,0 +1,101 @@
+/* UI Phase 13 — clean mobile drawer navigation and updated brand spacing */
+@import url('ui-phase12.css?v=20260726-9');
+
+@media (max-width:820px){
+  .topbar{
+    min-height:72px!important;
+    height:72px!important;
+    padding:10px 16px!important;
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr) 42px auto!important;
+    align-items:center!important;
+    gap:10px!important;
+    position:sticky!important;
+    top:0!important;
+    z-index:1200!important;
+    background:rgba(255,255,255,.97)!important;
+    backdrop-filter:blur(14px);
+  }
+  .topbar .brand{min-width:0!important;display:flex!important;align-items:center!important;gap:9px!important}
+  .topbar .brand-mark{width:40px!important;height:40px!important;flex:0 0 40px!important}
+  .topbar .brand strong{font-size:16px!important;white-space:nowrap!important}
+  .topbar .brand small{font-size:8px!important;white-space:nowrap!important}
+  .menu-toggle{
+    display:grid!important;
+    place-items:center!important;
+    width:42px!important;
+    height:42px!important;
+    padding:0!important;
+    margin:0!important;
+    border:0!important;
+    border-radius:10px!important;
+    background:#f5f1e8!important;
+    color:#0d4b40!important;
+    font-size:0!important;
+    box-shadow:none!important;
+    position:relative!important;
+    z-index:1402!important;
+  }
+  .menu-toggle::before{content:'☰';font-size:22px;line-height:1}
+  body.mobile-menu-open .menu-toggle::before{content:'×';font-size:28px}
+  .header-actions{display:flex!important;gap:0!important;justify-self:end!important}
+  .header-actions .btn-ghost{display:none!important}
+  .header-actions .btn-dark{height:42px!important;padding:0 14px!important;font-size:11px!important;white-space:nowrap!important;border-radius:9px!important}
+
+  .main-nav{
+    display:flex!important;
+    position:fixed!important;
+    top:0!important;
+    right:0!important;
+    width:min(82vw,330px)!important;
+    height:100dvh!important;
+    padding:96px 24px 30px!important;
+    margin:0!important;
+    flex-direction:column!important;
+    align-items:stretch!important;
+    gap:4px!important;
+    background:#fffdf9!important;
+    border-left:1px solid #e9dfcf!important;
+    box-shadow:-20px 0 55px rgba(16,54,46,.16)!important;
+    transform:translateX(105%)!important;
+    opacity:1!important;
+    visibility:visible!important;
+    transition:transform .26s ease!important;
+    z-index:1400!important;
+    overflow-y:auto!important;
+  }
+  body.mobile-menu-open .main-nav{transform:translateX(0)!important}
+  .main-nav a{
+    display:flex!important;
+    align-items:center!important;
+    min-height:52px!important;
+    padding:0 15px!important;
+    margin:0!important;
+    border-radius:10px!important;
+    font-size:15px!important;
+    font-weight:600!important;
+    color:#173c35!important;
+    border:0!important;
+    text-decoration:none!important;
+  }
+  .main-nav a.active{background:#edf4f0!important;color:#0d5a4c!important}
+  .main-nav a.active::after{display:none!important}
+  .mobile-nav-backdrop{
+    position:fixed;
+    inset:0;
+    background:rgba(10,35,30,.35);
+    opacity:0;
+    visibility:hidden;
+    transition:.25s ease;
+    z-index:1390;
+  }
+  body.mobile-menu-open .mobile-nav-backdrop{opacity:1;visibility:visible}
+  body.mobile-menu-open{overflow:hidden!important}
+}
+
+@media (max-width:390px){
+  .topbar{grid-template-columns:minmax(0,1fr) 40px auto!important;padding:9px 12px!important}
+  .topbar .brand strong{font-size:14px!important}
+  .header-actions .btn-dark{padding:0 10px!important;font-size:10px!important}
+  .main-nav{width:86vw!important;padding-left:20px!important;padding-right:20px!important}
+}

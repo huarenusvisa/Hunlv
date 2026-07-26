@@ -1,4 +1,9 @@
 (() => {
+  const heroRatioStylesheet = document.createElement('link');
+  heroRatioStylesheet.rel = 'stylesheet';
+  heroRatioStylesheet.href = 'hero-ratio-fix.css?v=20260726-1';
+  document.head.appendChild(heroRatioStylesheet);
+
   const siteName = '华人婚姻绿卡网';
   const fullTitle = '华人美国婚姻绿卡网｜华人婚姻绿卡网｜美国婚姻绿卡申请与交友';
 

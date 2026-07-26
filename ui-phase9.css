@@ -1,0 +1,149 @@
+/* UI Phase 9 — mobile deployment for the centered, image-free hero */
+@import url('ui-phase8.css?v=20260726-5');
+
+@media (max-width:820px){
+  .topbar{
+    min-height:68px;
+    padding:11px 16px;
+    gap:10px;
+  }
+  .brand{min-width:0}
+  .brand-mark{width:39px;height:39px;font-size:16px}
+  .brand strong{font-size:16px}
+  .brand small{font-size:8px}
+  .header-actions{gap:7px}
+  .header-actions .btn{height:38px;padding:0 11px;font-size:10px}
+  .menu-toggle{width:38px;height:38px}
+
+  .hero{
+    min-height:0;
+    padding:25px 18px 30px;
+    gap:20px;
+    grid-template-columns:1fr;
+    justify-items:center;
+    background:linear-gradient(180deg,#fbf7ef 0%,#fffdf9 55%,#faf5ec 100%);
+  }
+  .hero-copy{
+    width:min(430px,100%);
+    max-width:430px;
+    text-align:center;
+  }
+  .eyebrow{
+    justify-content:center;
+    min-height:29px;
+    padding:0 11px;
+    font-size:9px;
+  }
+  .hero h1{
+    margin:16px 0 12px;
+    font-size:36px;
+    line-height:1.12;
+    letter-spacing:.01em;
+  }
+  .hero-subtitle{
+    max-width:390px;
+    margin-left:auto;
+    margin-right:auto;
+    font-size:13px;
+    line-height:1.8;
+  }
+  .hero-actions{
+    width:min(390px,100%);
+    margin:18px auto 14px;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:10px;
+  }
+  .hero-actions .btn{
+    width:100%;
+    height:46px;
+    padding:0 13px;
+    font-size:11px;
+    border-radius:7px;
+  }
+  .social-proof{
+    justify-content:center;
+    margin-top:14px;
+    gap:9px;
+  }
+  .social-proof p{
+    font-size:9px;
+    white-space:normal;
+    text-align:left;
+    line-height:1.5;
+  }
+  .mini-avatars img{width:29px;height:29px}
+
+  .hero-visual{
+    width:min(430px,100%);
+    max-width:430px;
+    gap:10px;
+    margin:0 auto;
+  }
+  .progress-card,
+  .materials-card{
+    width:100%!important;
+    max-width:430px!important;
+    border-radius:13px;
+  }
+  .progress-card{
+    min-height:0;
+    padding:18px 17px 16px;
+  }
+  .progress-card .card-heading p{font-size:15px}
+  .progress-card .card-heading small,
+  .progress-card .card-heading a{font-size:9px}
+  .progress-grid{
+    grid-template-columns:104px minmax(0,1fr);
+    gap:13px;
+    margin:14px 0 10px;
+  }
+  .progress-ring{width:98px;height:98px}
+  .progress-ring:before{inset:11px}
+  .progress-ring strong{font-size:27px}
+  .estimate strong{font-size:18px}
+  .status-list{gap:7px}
+  .status-list li{
+    grid-template-columns:12px 1fr 40px;
+    gap:6px;
+    font-size:9px;
+  }
+  .status-list li span{width:8px;height:8px}
+
+  .materials-card{
+    min-height:78px;
+    padding:13px 15px;
+    grid-template-columns:minmax(0,1fr) 34px auto;
+    gap:9px;
+  }
+  .materials-card strong{font-size:12px}
+  .materials-card small,
+  .materials-card span,
+  .materials-card a{font-size:8px}
+  .folder-icon{font-size:25px}
+
+  .community{min-height:0;padding-top:29px;padding-bottom:34px}
+  .community .section-heading-row h2{font-size:23px}
+  .feature-strip{margin-bottom:13px}
+  .profile-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .profile-card{min-height:0}
+  .photo-wrap{aspect-ratio:1/1}
+
+  .journey{min-height:0;padding-top:34px;padding-bottom:25px}
+  .journey .center-heading h2{font-size:25px}
+  .steps-grid{height:auto}
+  .steps-grid article{min-height:140px}
+
+  .trust-strip{padding:15px 18px}
+  .footer{padding:30px 20px 18px}
+}
+
+@media (max-width:390px){
+  .hero{padding-left:14px;padding-right:14px}
+  .hero h1{font-size:33px}
+  .hero-actions{gap:8px}
+  .hero-actions .btn{height:44px;padding:0 10px;font-size:10px}
+  .progress-grid{grid-template-columns:92px minmax(0,1fr);gap:10px}
+  .progress-ring{width:88px;height:88px}
+  .progress-ring strong{font-size:24px}
+  .estimate strong{font-size:16px}
+}

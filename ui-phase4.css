@@ -1,3 +1,4 @@
-/* Phase 4 entrypoint loads the approved responsive system plus the wide high-fill desktop layout. */
+/* Phase 4 entrypoint loads the approved responsive system and final desktop hero. */
 @import url('ui-phase13.css?v=20260726-10');
 @import url('ui-phase14.css?v=20260726-11');
+@import url('ui-phase15.css?v=20260726-12');

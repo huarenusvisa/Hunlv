@@ -1,0 +1,98 @@
+/* UI Phase 8 — remove the central image and center the two useful hero blocks */
+@import url('ui-phase7.css?v=20260726-4');
+
+/* The decorative wedding image is intentionally removed from the hero. */
+.couple-card{display:none!important}
+
+@media (min-width:1181px){
+  .hero{
+    min-height:455px;
+    padding-top:24px;
+    padding-bottom:24px;
+    grid-template-columns:390px 382px;
+    justify-content:center;
+    align-items:center;
+    gap:42px;
+  }
+
+  .hero-copy{
+    width:390px;
+    max-width:390px;
+    align-self:center;
+  }
+
+  .hero-visual{
+    position:relative;
+    width:382px;
+    max-width:382px;
+    min-height:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:12px;
+  }
+
+  .progress-card,
+  .materials-card{
+    position:relative!important;
+    inset:auto!important;
+    right:auto!important;
+    left:auto!important;
+    top:auto!important;
+    bottom:auto!important;
+    width:382px!important;
+    max-width:382px;
+  }
+
+  .progress-card{
+    min-height:310px;
+    padding:19px 21px 17px;
+  }
+
+  .materials-card{
+    min-height:84px;
+    padding:14px 18px;
+  }
+}
+
+/* Keep the image-free composition usable on tablets and phones. */
+@media (max-width:1180px){
+  .hero{
+    grid-template-columns:1fr;
+    justify-items:center;
+  }
+
+  .hero-copy{
+    width:min(620px,100%);
+    max-width:620px;
+  }
+
+  .hero-visual{
+    position:relative;
+    width:min(620px,100%);
+    max-width:620px;
+    min-height:0!important;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    margin:0 auto;
+  }
+
+  .progress-card,
+  .materials-card{
+    position:relative!important;
+    inset:auto!important;
+    right:auto!important;
+    left:auto!important;
+    top:auto!important;
+    bottom:auto!important;
+    width:100%!important;
+    max-width:none!important;
+  }
+}
+
+@media (max-width:520px){
+  .hero-visual{gap:10px}
+  .progress-card{padding:17px 16px}
+  .materials-card{padding:13px 15px}
+}

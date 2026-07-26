@@ -1,3 +1,39 @@
+// Load the approved phase-one visual layer.
+const phaseOneStyles = document.createElement('link');
+phaseOneStyles.rel = 'stylesheet';
+phaseOneStyles.href = 'ui-phase1.css?v=20260726-1';
+document.head.appendChild(phaseOneStyles);
+
+// Match the approved homepage UI copy without changing the page architecture.
+const brandTagline = document.querySelector('.brand small');
+if (brandTagline) brandTagline.textContent = '专业 · 高效 · 安心';
+
+const eyebrow = document.querySelector('.hero .eyebrow');
+if (eyebrow) eyebrow.textContent = '♡ 专注婚姻绿卡 · 助力华人家庭团聚';
+
+const heroTitle = document.querySelector('.hero h1');
+if (heroTitle) heroTitle.textContent = '婚姻绿卡申请';
+
+const heroSubtitle = document.querySelector('.hero-subtitle');
+if (heroSubtitle) {
+  heroSubtitle.textContent = '从条件评估到获批，一站式婚姻绿卡申请指南。真实模拟提交步骤、专业材料指引，可信赖的社区与交流陪伴您走好每一步。';
+}
+
+const heroButtons = document.querySelectorAll('.hero-actions .btn');
+const heroButtonLabels = ['开始了解', '立即模拟提交', '律师咨询', '问题留言'];
+heroButtons.forEach((button, index) => {
+  if (!heroButtonLabels[index]) return;
+  const arrow = button.querySelector('span');
+  button.childNodes.forEach(node => {
+    if (node.nodeType === Node.TEXT_NODE) node.textContent = '';
+  });
+  button.insertAdjacentText('afterbegin', heroButtonLabels[index]);
+  if (!arrow) button.insertAdjacentHTML('beforeend', '<span>→</span>');
+});
+
+const proofText = document.querySelector('.social-proof p');
+if (proofText) proofText.innerHTML = '<strong>已有 26,476 位用户</strong> 使用婚绿申请指引与材料清单';
+
 const menuToggle = document.getElementById('menuToggle');
 const mainNav = document.getElementById('mainNav');
 

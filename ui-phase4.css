@@ -1,2 +1,2 @@
-/* Phase 4 entrypoint now loads the image-free, card-free centered hero plus compact mobile sections. */
-@import url('ui-phase12.css?v=20260726-9');
+/* Phase 4 entrypoint now loads the card-free hero, compact mobile sections, and clean drawer navigation. */
+@import url('ui-phase13.css?v=20260726-10');

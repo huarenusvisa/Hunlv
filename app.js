@@ -1,5 +1,5 @@
 // Load the approved visual layers.
-['ui-phase1.css?v=20260726-1','ui-phase2.css?v=20260726-1'].forEach(href => {
+['ui-phase1.css?v=20260726-1','ui-phase2.css?v=20260726-1','ui-phase3.css?v=20260726-1'].forEach(href => {
   const stylesheet = document.createElement('link');
   stylesheet.rel = 'stylesheet';
   stylesheet.href = href;

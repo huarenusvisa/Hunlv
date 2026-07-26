@@ -25,20 +25,22 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Fetch official sources and build feed
+      - name: Build daily Huaren Hunlv knowledge and check official sources
         run: python automation/update_knowledge.py
 
       - name: Validate generated JSON
-        run: python -m json.tool data/knowledge-updates.json > /dev/null
-
-      - name: Commit changes when content changed
         run: |
-          if git diff --quiet -- data/knowledge-updates.json data/knowledge-updates.js data/knowledge-state.json; then
-            echo "No knowledge changes detected."
+          python -m json.tool data/knowledge-updates.json > /dev/null
+          python -m json.tool data/daily-knowledge.json > /dev/null
+
+      - name: Commit the daily website update
+        run: |
+          if git diff --quiet -- data/knowledge-updates.json data/knowledge-updates.js data/knowledge-state.json data/daily-knowledge.json; then
+            echo "No generated changes detected."
             exit 0
           fi
           git config user.name "huarenhunlv-knowledge-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/knowledge-updates.json data/knowledge-updates.js data/knowledge-state.json
-          git commit -m "Auto-update official marriage green card knowledge"
+          git add data/knowledge-updates.json data/knowledge-updates.js data/knowledge-state.json data/daily-knowledge.json
+          git commit -m "Daily update: marriage green card knowledge $(date -u +%F)"
           git push

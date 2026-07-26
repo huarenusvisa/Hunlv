@@ -1,0 +1,82 @@
+/* UI Phase 7 — horizontal banner ratio inspired by the reference composition */
+@import url('ui-phase6.css?v=20260726-3');
+
+@media (min-width:1181px){
+  /* Full-width, shallow banner canvas */
+  .hero{
+    min-height:455px;
+    padding:25px max(28px,calc((100vw - 1400px)/2));
+    grid-template-columns:minmax(350px,395px) minmax(760px,900px);
+    justify-content:center;
+    align-items:center;
+    gap:34px;
+    background:
+      radial-gradient(circle at 63% 48%,rgba(255,255,255,.92),transparent 36%),
+      linear-gradient(105deg,#fbf7ef 0%,#fffdf9 49%,#f7f1e7 100%);
+  }
+  .hero:before{width:330px;height:245px;opacity:.055}
+
+  /* Left information panel */
+  .hero-copy{max-width:395px}
+  .eyebrow{min-height:28px;padding:0 11px;font-size:10px}
+  .hero h1{font-size:44px;line-height:1.08;margin:17px 0 13px;letter-spacing:.01em}
+  .hero-subtitle{max-width:385px;font-size:13px;line-height:1.78}
+  .hero-actions{grid-template-columns:repeat(2,158px);gap:9px 12px;margin:18px 0 14px}
+  .hero-actions .btn{height:44px;padding:0 15px;font-size:12px;border-radius:6px}
+  .social-proof{margin-top:14px;gap:10px}
+  .social-proof p{font-size:9px;white-space:nowrap}
+  .mini-avatars img{width:28px;height:28px;border-width:2px}
+
+  /* Right visual panel: wide image + compact stacked cards */
+  .hero-visual{width:100%;max-width:900px;min-height:405px}
+  .couple-card{
+    inset:0 305px 0 0;
+    border-radius:10px;
+    box-shadow:0 15px 48px rgba(27,55,48,.12);
+  }
+  .couple-card img{object-position:51% center}
+
+  .progress-card{
+    top:5px;
+    right:0;
+    width:350px;
+    min-height:300px;
+    padding:18px 20px 16px;
+    border-radius:14px;
+  }
+  .progress-card .card-heading p{font-size:15px}
+  .progress-card .card-heading small,.progress-card .card-heading a{font-size:9px}
+  .progress-grid{grid-template-columns:105px 1fr;gap:13px;margin:13px 0 8px}
+  .progress-ring{width:100px;height:100px}
+  .progress-ring:before{inset:11px}
+  .progress-ring strong{font-size:27px}
+  .progress-ring small{font-size:9px}
+  .estimate small{font-size:9px}
+  .estimate strong{font-size:18px}
+  .estimate span{font-size:9px}
+  .status-list{gap:7px;margin-top:7px}
+  .status-list li{font-size:9px;grid-template-columns:12px 1fr 40px;gap:6px}
+  .status-list li span{width:8px;height:8px;border-width:1px}
+
+  .materials-card{
+    right:0;
+    bottom:4px;
+    width:350px;
+    min-height:82px;
+    padding:13px 17px;
+    border-radius:12px;
+    grid-template-columns:1fr 36px auto;
+    gap:11px;
+  }
+  .materials-card strong{font-size:12px}
+  .materials-card small,.materials-card span,.materials-card a{font-size:8px}
+  .folder-icon{font-size:27px}
+}
+
+/* Very wide monitors: prevent the banner from feeling undersized */
+@media (min-width:1650px){
+  .hero{grid-template-columns:395px 930px;gap:42px}
+  .hero-visual{max-width:930px}
+  .couple-card{right:320px}
+  .progress-card,.materials-card{width:365px}
+}

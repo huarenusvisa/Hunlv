@@ -1,0 +1,31 @@
+/* UI Phase 6 — compress desktop hero for a calmer visual rhythm */
+@import url('ui-phase5.css?v=20260726-2');
+
+@media (min-width:1181px){
+  .hero{
+    min-height:560px;
+    padding-top:24px;
+    padding-bottom:24px;
+    grid-template-columns:minmax(390px,425px) minmax(610px,670px);
+    gap:22px;
+  }
+  .hero-copy{max-width:410px}
+  .eyebrow{min-height:30px;padding:0 12px;font-size:11px}
+  .hero h1{font-size:48px;line-height:1.08;margin:20px 0 15px}
+  .hero-subtitle{max-width:400px;font-size:14px;line-height:1.85}
+  .hero-actions{grid-template-columns:repeat(2,168px);gap:10px 14px;margin:21px 0 18px}
+  .hero-actions .btn{height:48px;padding:0 17px;font-size:13px}
+  .social-proof{margin-top:18px}.social-proof p{font-size:10px}.mini-avatars img{width:31px;height:31px}
+
+  .hero-visual{min-height:500px;max-width:670px}
+  .couple-card{inset:0 278px 0 0}
+  .progress-card{top:0;right:0;width:370px;min-height:365px;padding:21px 22px 19px;border-radius:15px}
+  .progress-card .card-heading p{font-size:16px}.progress-card .card-heading a{font-size:10px}
+  .progress-grid{grid-template-columns:122px 1fr;gap:15px;margin:17px 0 11px}
+  .progress-ring{width:116px;height:116px}.progress-ring:before{inset:13px}.progress-ring strong{font-size:29px}
+  .estimate strong{font-size:20px}.estimate span{font-size:10px}
+  .status-list{gap:9px}.status-list li{font-size:10px;grid-template-columns:14px 1fr 43px}.status-list li span{width:9px;height:9px}
+
+  .materials-card{right:0;bottom:0;width:370px;min-height:98px;padding:17px 20px;border-radius:14px;grid-template-columns:1fr 42px auto}
+  .materials-card strong{font-size:13px}.materials-card small,.materials-card span,.materials-card a{font-size:9px}.folder-icon{font-size:31px}
+}

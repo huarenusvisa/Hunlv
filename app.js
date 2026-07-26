@@ -1,8 +1,10 @@
-// Load the approved phase-one visual layer.
-const phaseOneStyles = document.createElement('link');
-phaseOneStyles.rel = 'stylesheet';
-phaseOneStyles.href = 'ui-phase1.css?v=20260726-1';
-document.head.appendChild(phaseOneStyles);
+// Load the approved visual layers.
+['ui-phase1.css?v=20260726-1','ui-phase2.css?v=20260726-1'].forEach(href => {
+  const stylesheet = document.createElement('link');
+  stylesheet.rel = 'stylesheet';
+  stylesheet.href = href;
+  document.head.appendChild(stylesheet);
+});
 
 // Match the approved homepage UI copy without changing the page architecture.
 const brandTagline = document.querySelector('.brand small');
@@ -33,6 +35,50 @@ heroButtons.forEach((button, index) => {
 
 const proofText = document.querySelector('.social-proof p');
 if (proofText) proofText.innerHTML = '<strong>已有 26,476 位用户</strong> 使用婚绿申请指引与材料清单';
+
+// Phase two: reproduce the compact two-row community in the approved UI.
+const communityTitle = document.querySelector('.community .section-heading-row h2');
+if (communityTitle) communityTitle.textContent = '交友社区';
+
+const profileGrid = document.getElementById('profileGrid');
+if (profileGrid && profileGrid.children.length < 10) {
+  const extraProfiles = [
+    {
+      tags:'verified ca', name:'Linda · 31', city:'湾区 · 产品经理', meta:'硕士 · 166cm', labels:['热爱生活','认真交友'],
+      image:'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=560&q=84'
+    },
+    {
+      tags:'verified ny', name:'Kevin · 36', city:'纽约 · 财务分析', meta:'本科 · 179cm', labels:['稳重真诚','喜欢运动'],
+      image:'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=560&q=84'
+    },
+    {
+      tags:'verified ca', name:'Anna · 28', city:'洛杉矶 · 教育行业', meta:'硕士 · 163cm', labels:['阅读旅行','性格开朗'],
+      image:'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=560&q=84'
+    },
+    {
+      tags:'ny', name:'Daniel · 33', city:'纽约 · 工程行业', meta:'硕士 · 181cm', labels:['摄影徒步','责任感强'],
+      image:'https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?auto=format&fit=crop&w=560&q=84'
+    },
+    {
+      tags:'verified ca', name:'Sophia · 30', city:'加州 · 医疗行业', meta:'本科 · 165cm', labels:['瑜伽美食','真诚沟通'],
+      image:'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=560&q=84'
+    }
+  ];
+
+  extraProfiles.forEach(profile => {
+    profileGrid.insertAdjacentHTML('beforeend', `
+      <article class="profile-card" data-tags="${profile.tags}">
+        <div class="photo-wrap"><img src="${profile.image}" alt="${profile.name} 示例头像" loading="lazy"><span>在线</span></div>
+        <div class="profile-info"><h3>${profile.name} <i>✓</i></h3><p>${profile.city}</p><small>${profile.meta}</small><div><em>${profile.labels[0]}</em><em>${profile.labels[1]}</em><button aria-label="喜欢">♡</button></div></div>
+      </article>`);
+  });
+}
+
+const journeyTitle = document.querySelector('.journey .center-heading h2');
+if (journeyTitle) journeyTitle.textContent = '模拟提交婚姻绿卡流程';
+
+const journeyIntro = document.querySelector('.journey .center-heading p');
+if (journeyIntro) journeyIntro.textContent = '按真实申请顺序了解资格、材料、表格、提交、进度与面谈。';
 
 const menuToggle = document.getElementById('menuToggle');
 const mainNav = document.getElementById('mainNav');

@@ -1,0 +1,166 @@
+/* Phase 14: wide, high-fill desktop layout. Mobile/tablet rules remain unchanged. */
+@media (min-width: 1024px) {
+  :root {
+    --desktop-shell: min(1240px, calc(100vw - 64px));
+  }
+
+  .topbar {
+    width: var(--desktop-shell) !important;
+    max-width: none !important;
+    min-height: 76px;
+    margin-inline: auto !important;
+    padding: 14px 0 !important;
+    gap: 22px;
+  }
+
+  .brand {
+    min-width: 250px;
+  }
+
+  .main-nav {
+    gap: 20px;
+  }
+
+  .main-nav a {
+    font-size: 14px;
+  }
+
+  .hero {
+    width: var(--desktop-shell) !important;
+    max-width: none !important;
+    min-height: 360px !important;
+    height: auto !important;
+    margin-inline: auto !important;
+    padding: 38px 0 !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, .92fr) minmax(480px, 1.08fr) !important;
+    align-items: center !important;
+    gap: 54px !important;
+    background: transparent !important;
+  }
+
+  .hero:before {
+    display: none !important;
+  }
+
+  .hero-copy {
+    width: 100%;
+    max-width: 570px !important;
+    margin: 0 !important;
+    text-align: left !important;
+  }
+
+  .hero .eyebrow {
+    display: inline-flex;
+    margin: 0 0 16px !important;
+  }
+
+  .hero h1 {
+    margin: 0 0 14px !important;
+    font-size: clamp(48px, 3.25vw, 54px) !important;
+    line-height: 1.12 !important;
+    letter-spacing: -.035em;
+    white-space: nowrap;
+  }
+
+  .hero-subtitle {
+    max-width: 560px !important;
+    margin: 0 !important;
+    font-size: 18px !important;
+    line-height: 1.78 !important;
+  }
+
+  .hero-actions {
+    width: min(520px, 100%);
+    margin: 22px 0 0 !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+  }
+
+  .hero-actions .btn {
+    min-width: 0 !important;
+    height: 50px !important;
+    padding: 0 20px !important;
+    justify-content: space-between !important;
+  }
+
+  .social-proof {
+    margin-top: 18px !important;
+  }
+
+  .hero-visual {
+    display: block !important;
+    position: relative !important;
+    min-height: 0 !important;
+    height: 330px !important;
+    width: 100% !important;
+  }
+
+  .couple-card {
+    display: block !important;
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 24px !important;
+    box-shadow: 0 24px 60px rgba(24,48,43,.16) !important;
+  }
+
+  .couple-card img {
+    object-position: center 42% !important;
+  }
+
+  .couple-caption {
+    bottom: 18px !important;
+    left: 18px !important;
+  }
+
+  /* The previously rejected progress/material cards stay removed. */
+  .progress-card,
+  .materials-card {
+    display: none !important;
+  }
+
+  .community {
+    width: var(--desktop-shell) !important;
+    max-width: none !important;
+    margin-inline: auto !important;
+    padding: 46px 0 54px !important;
+  }
+
+  .community .section-heading-row {
+    margin-bottom: 18px !important;
+  }
+
+  .community .section-heading-row h2 {
+    font-size: 38px !important;
+  }
+
+  .feature-strip {
+    margin: 12px 0 20px !important;
+  }
+
+  .profile-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+    gap: 16px !important;
+  }
+
+  .profile-card {
+    border-radius: 16px !important;
+  }
+
+  .photo-wrap {
+    aspect-ratio: 1 / .82 !important;
+  }
+
+  .profile-info {
+    padding: 14px !important;
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero {
+    grid-template-columns: 550px minmax(0, 1fr) !important;
+    gap: 64px !important;
+  }
+}

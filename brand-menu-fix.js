@@ -1,7 +1,7 @@
 (() => {
   const heroRatioStylesheet = document.createElement('link');
   heroRatioStylesheet.rel = 'stylesheet';
-  heroRatioStylesheet.href = 'hero-ratio-fix.css?v=20260726-3';
+  heroRatioStylesheet.href = 'hero-ratio-fix.css?v=20260726-4';
   document.head.appendChild(heroRatioStylesheet);
 
   const siteName = '华人婚姻绿卡网';

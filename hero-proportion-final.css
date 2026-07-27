@@ -1,4 +1,8 @@
 /* Homepage hero scaled down proportionally by about 30% on desktop. */
+.hero-subtitle {
+  display: none !important;
+}
+
 @media (min-width: 1024px) {
   .hero.section-pad {
     width: min(896px, calc(100vw - 72px)) !important;
@@ -29,15 +33,9 @@
     line-height: 1.08 !important;
   }
 
-  .hero-subtitle {
-    max-width: 434px !important;
-    font-size: 13px !important;
-    line-height: 1.75 !important;
-  }
-
   .hero-actions {
     width: min(434px, 100%) !important;
-    margin: 18px 0 0 !important;
+    margin: 14px 0 0 !important;
     gap: 10px 11px !important;
   }
 
@@ -93,7 +91,6 @@
   }
 
   .hero h1 { font-size: 36px !important; }
-  .hero-subtitle { font-size: 12px !important; }
   .hero-actions .btn-large { height: 41px !important; min-height: 41px !important; }
   .hero-visual { height: 353px !important; min-height: 353px !important; }
 }

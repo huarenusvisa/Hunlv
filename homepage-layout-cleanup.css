@@ -1,0 +1,125 @@
+/* Final homepage cleanup: remove excess hero whitespace, reduce the portrait, and align all desktop content edges. */
+@media (min-width: 1024px) {
+  :root {
+    --home-content-width: 896px;
+  }
+
+  .hero.section-pad {
+    width: min(var(--home-content-width), calc(100vw - 48px)) !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 16px auto 22px !important;
+    padding: 16px 22px !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) 286px !important;
+    gap: 24px !important;
+    align-items: center !important;
+    box-sizing: border-box !important;
+  }
+
+  .hero-copy {
+    padding: 0 !important;
+    margin: 0 !important;
+    align-self: center !important;
+  }
+
+  .hero .eyebrow {
+    margin: 0 0 14px !important;
+  }
+
+  .hero h1 {
+    margin: 0 0 16px !important;
+  }
+
+  .hero-subtitle {
+    display: none !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .hero-actions {
+    margin: 0 !important;
+  }
+
+  .social-proof {
+    margin-top: 14px !important;
+  }
+
+  .hero-visual {
+    width: 286px !important;
+    height: 326px !important;
+    min-height: 326px !important;
+    justify-self: end !important;
+    align-self: center !important;
+    border-radius: 18px !important;
+    overflow: hidden !important;
+  }
+
+  .hero-visual .couple-card,
+  .hero-visual .couple-card img {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 18px !important;
+  }
+
+  .hero-visual .couple-card {
+    background-size: cover !important;
+    background-position: center 44% !important;
+  }
+
+  .community.section-pad {
+    width: min(var(--home-content-width), calc(100vw - 48px)) !important;
+    max-width: none !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .community .section-heading-row {
+    width: 100% !important;
+    margin: 0 0 12px !important;
+    box-sizing: border-box !important;
+  }
+
+  .community .feature-strip {
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 42px !important;
+    margin: 0 0 16px !important;
+    padding: 8px 14px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 26px !important;
+    border-radius: 12px !important;
+    box-sizing: border-box !important;
+  }
+
+  .community .profile-grid {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+    gap: 14px !important;
+    box-sizing: border-box !important;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1100px) {
+  :root {
+    --home-content-width: 860px;
+  }
+
+  .hero.section-pad {
+    grid-template-columns: minmax(0, 1fr) 270px !important;
+    gap: 20px !important;
+  }
+
+  .hero-visual {
+    width: 270px !important;
+    height: 308px !important;
+    min-height: 308px !important;
+  }
+}

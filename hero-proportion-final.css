@@ -1,0 +1,105 @@
+/* Final proportion correction for the homepage hero. Loaded after every earlier hero layer. */
+@media (min-width: 1024px) {
+  .hero.section-pad {
+    width: min(1280px, calc(100vw - 72px)) !important;
+    height: 600px !important;
+    min-height: 600px !important;
+    margin: 24px auto 52px !important;
+    padding: 32px 38px !important;
+    grid-template-columns: minmax(0, 1.12fr) minmax(440px, .88fr) !important;
+    gap: 40px !important;
+    align-items: center !important;
+  }
+
+  .hero-copy {
+    padding: 10px 0 10px 10px !important;
+    align-self: center !important;
+  }
+
+  .hero .eyebrow {
+    min-height: 40px !important;
+    margin: 0 0 24px !important;
+    padding: 0 18px !important;
+    font-size: 14px !important;
+  }
+
+  .hero h1 {
+    margin: 0 0 20px !important;
+    font-size: clamp(54px, 4vw, 68px) !important;
+    line-height: 1.08 !important;
+  }
+
+  .hero-subtitle {
+    max-width: 620px !important;
+    font-size: 18px !important;
+    line-height: 1.75 !important;
+  }
+
+  .hero-actions {
+    width: min(620px, 100%) !important;
+    margin: 26px 0 0 !important;
+    gap: 14px 16px !important;
+  }
+
+  .hero-actions .btn-large {
+    height: 62px !important;
+    min-height: 62px !important;
+    padding: 0 24px !important;
+    border-radius: 13px !important;
+    font-size: 17px !important;
+  }
+
+  .social-proof {
+    margin-top: 26px !important;
+    gap: 14px !important;
+  }
+
+  .mini-avatars img {
+    width: 42px !important;
+    height: 42px !important;
+  }
+
+  .social-proof p { font-size: 14px !important; }
+  .social-proof strong { font-size: 18px !important; }
+
+  .hero-visual {
+    width: 100% !important;
+    height: 536px !important;
+    min-height: 536px !important;
+    align-self: center !important;
+    border-radius: 24px !important;
+  }
+
+  .hero-visual .couple-card {
+    border-radius: 24px !important;
+    background-size: cover !important;
+    background-position: center 45% !important;
+  }
+
+  .community.section-pad {
+    padding-top: 0 !important;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1240px) {
+  .hero.section-pad {
+    width: calc(100vw - 40px) !important;
+    height: 560px !important;
+    min-height: 560px !important;
+    padding: 28px 30px !important;
+    grid-template-columns: minmax(0, 1.08fr) minmax(390px, .92fr) !important;
+    gap: 30px !important;
+  }
+
+  .hero h1 { font-size: 52px !important; }
+  .hero-subtitle { font-size: 17px !important; }
+  .hero-actions .btn-large { height: 58px !important; min-height: 58px !important; }
+  .hero-visual { height: 504px !important; min-height: 504px !important; }
+}
+
+@media (max-width: 1023px) {
+  .hero.section-pad {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+}

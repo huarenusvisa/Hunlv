@@ -1,0 +1,42 @@
+/* Warm-gold border system for the homepage. Chosen to match the existing ivory, forest-green and champagne palette. */
+:root {
+  --warm-border: #d4a24c;
+  --warm-border-soft: rgba(212, 162, 76, .72);
+  --warm-border-light: rgba(212, 162, 76, .46);
+  --warm-glow: rgba(180, 128, 43, .10);
+}
+
+.hero.section-pad {
+  border: 1.5px solid var(--warm-border-soft) !important;
+  box-shadow: 0 16px 42px var(--warm-glow) !important;
+}
+
+.hero .eyebrow {
+  border-color: var(--warm-border-soft) !important;
+}
+
+.hero-actions .btn-light,
+.header-actions .btn-ghost {
+  border-color: var(--warm-border-soft) !important;
+}
+
+.community .feature-strip {
+  border: 1.5px solid var(--warm-border-soft) !important;
+  background: rgba(255, 252, 244, .92) !important;
+}
+
+.profile-card {
+  border-color: var(--warm-border-light) !important;
+  box-shadow: 0 8px 22px rgba(116, 79, 25, .07) !important;
+}
+
+@media (hover: hover) {
+  .profile-card:hover {
+    border-color: var(--warm-border) !important;
+  }
+
+  .hero-actions .btn-light:hover,
+  .header-actions .btn-ghost:hover {
+    border-color: var(--warm-border) !important;
+  }
+}

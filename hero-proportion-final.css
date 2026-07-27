@@ -1,77 +1,78 @@
-/* Final proportion correction for the homepage hero. Loaded after every earlier hero layer. */
+/* Homepage hero scaled down proportionally by about 30% on desktop. */
 @media (min-width: 1024px) {
   .hero.section-pad {
-    width: min(1280px, calc(100vw - 72px)) !important;
-    height: 600px !important;
-    min-height: 600px !important;
-    margin: 24px auto 52px !important;
-    padding: 32px 38px !important;
-    grid-template-columns: minmax(0, 1.12fr) minmax(440px, .88fr) !important;
-    gap: 40px !important;
+    width: min(896px, calc(100vw - 72px)) !important;
+    height: 420px !important;
+    min-height: 420px !important;
+    margin: 18px auto 36px !important;
+    padding: 22px 27px !important;
+    grid-template-columns: minmax(0, 1.12fr) minmax(308px, .88fr) !important;
+    gap: 28px !important;
     align-items: center !important;
   }
 
   .hero-copy {
-    padding: 10px 0 10px 10px !important;
+    padding: 7px 0 7px 7px !important;
     align-self: center !important;
   }
 
   .hero .eyebrow {
-    min-height: 40px !important;
-    margin: 0 0 24px !important;
-    padding: 0 18px !important;
-    font-size: 14px !important;
+    min-height: 28px !important;
+    margin: 0 0 17px !important;
+    padding: 0 13px !important;
+    font-size: 11px !important;
   }
 
   .hero h1 {
-    margin: 0 0 20px !important;
-    font-size: clamp(54px, 4vw, 68px) !important;
+    margin: 0 0 14px !important;
+    font-size: clamp(38px, 2.8vw, 48px) !important;
     line-height: 1.08 !important;
   }
 
   .hero-subtitle {
-    max-width: 620px !important;
-    font-size: 18px !important;
+    max-width: 434px !important;
+    font-size: 13px !important;
     line-height: 1.75 !important;
   }
 
   .hero-actions {
-    width: min(620px, 100%) !important;
-    margin: 26px 0 0 !important;
-    gap: 14px 16px !important;
+    width: min(434px, 100%) !important;
+    margin: 18px 0 0 !important;
+    gap: 10px 11px !important;
   }
 
   .hero-actions .btn-large {
-    height: 62px !important;
-    min-height: 62px !important;
-    padding: 0 24px !important;
-    border-radius: 13px !important;
-    font-size: 17px !important;
+    height: 44px !important;
+    min-height: 44px !important;
+    padding: 0 17px !important;
+    border-radius: 9px !important;
+    font-size: 13px !important;
   }
 
   .social-proof {
-    margin-top: 26px !important;
-    gap: 14px !important;
+    margin-top: 18px !important;
+    gap: 10px !important;
   }
 
   .mini-avatars img {
-    width: 42px !important;
-    height: 42px !important;
+    width: 30px !important;
+    height: 30px !important;
+    border-width: 2px !important;
   }
 
-  .social-proof p { font-size: 14px !important; }
-  .social-proof strong { font-size: 18px !important; }
+  .social-proof p { font-size: 11px !important; }
+  .social-proof strong { font-size: 13px !important; }
 
   .hero-visual {
     width: 100% !important;
-    height: 536px !important;
-    min-height: 536px !important;
+    height: 375px !important;
+    min-height: 375px !important;
     align-self: center !important;
-    border-radius: 24px !important;
+    border-radius: 17px !important;
   }
 
   .hero-visual .couple-card {
-    border-radius: 24px !important;
+    border-radius: 17px !important;
     background-size: cover !important;
     background-position: center 45% !important;
   }
@@ -83,18 +84,18 @@
 
 @media (min-width: 1024px) and (max-width: 1240px) {
   .hero.section-pad {
-    width: calc(100vw - 40px) !important;
-    height: 560px !important;
-    min-height: 560px !important;
-    padding: 28px 30px !important;
-    grid-template-columns: minmax(0, 1.08fr) minmax(390px, .92fr) !important;
-    gap: 30px !important;
+    width: min(896px, calc(100vw - 40px)) !important;
+    height: 392px !important;
+    min-height: 392px !important;
+    padding: 20px 21px !important;
+    grid-template-columns: minmax(0, 1.08fr) minmax(273px, .92fr) !important;
+    gap: 21px !important;
   }
 
-  .hero h1 { font-size: 52px !important; }
-  .hero-subtitle { font-size: 17px !important; }
-  .hero-actions .btn-large { height: 58px !important; min-height: 58px !important; }
-  .hero-visual { height: 504px !important; min-height: 504px !important; }
+  .hero h1 { font-size: 36px !important; }
+  .hero-subtitle { font-size: 12px !important; }
+  .hero-actions .btn-large { height: 41px !important; min-height: 41px !important; }
+  .hero-visual { height: 353px !important; min-height: 353px !important; }
 }
 
 @media (max-width: 1023px) {

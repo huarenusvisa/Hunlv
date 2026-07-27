@@ -1,5 +1,5 @@
 (() => {
-  ['hero-ratio-fix.css?v=20260727-1', 'hero-proportion-final.css?v=20260727-2'].forEach(href => {
+  ['hero-ratio-fix.css?v=20260727-1', 'hero-proportion-final.css?v=20260727-3'].forEach(href => {
     const stylesheet = document.createElement('link');
     stylesheet.rel = 'stylesheet';
     stylesheet.href = href;

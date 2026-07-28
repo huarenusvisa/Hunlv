@@ -1,6 +1,22 @@
 {
-  "generated_at": "2026-07-27T17:22:31.645011+00:00",
+  "generated_at": "2026-07-28T16:54:38.522423+00:00",
   "items": [
+    {
+      "id": "daily-2026-07-28-f2a-visa-bulletin",
+      "date": "2026-07-28",
+      "title": "绿卡持有人申请配偶为什么必须关注F2A排期",
+      "category": "排期",
+      "summary": "绿卡持有人配偶属于家庭第二优先A类。能否推进到最终批准或在美国境内递交I-485，可能取决于国务院签证公告和USCIS当月指定使用的日期表。表A、表B用途不同，不能只看一个日期。",
+      "key_points": [
+        "确认优先日期",
+        "同时看国务院公告和USCIS指定表",
+        "排期前进或倒退都可能发生"
+      ],
+      "official_url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin.html",
+      "official": true,
+      "site": "华人婚姻绿卡网",
+      "disclaimer": "一般知识说明，不构成针对个人案件的法律意见。"
+    },
     {
       "id": "daily-2026-07-27-nvc-stage",
       "date": "2026-07-27",

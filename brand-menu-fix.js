@@ -21,8 +21,34 @@
   const loginHeading = document.querySelector('#loginModal h2');
   if (loginHeading) loginHeading.textContent = `登录${siteName}`;
 
-  const menuToggle = document.getElementById('menuToggle');
   const mainNav = document.getElementById('mainNav');
+  if (mainNav && !mainNav.querySelector('a[href="user-center.html"]')) {
+    const userLink = document.createElement('a');
+    userLink.href = 'user-center.html';
+    userLink.textContent = '用户中心';
+    mainNav.appendChild(userLink);
+  }
+
+  document.querySelectorAll('.community .section-heading-row a, .community a').forEach(link => {
+    if ((link.textContent || '').includes('查看更多')) link.href = 'users.html';
+  });
+
+  const community = document.querySelector('.community');
+  if (community && !community.querySelector('.community-demo-notice')) {
+    const notice = document.createElement('p');
+    notice.className = 'community-demo-notice';
+    notice.textContent = '当前人物资料为功能示例，不代表真实注册用户。真实资料仅展示本人提交、授权并审核通过的用户。';
+    const grid = community.querySelector('.profile-grid');
+    if (grid) community.insertBefore(notice, grid);
+  }
+
+  document.querySelectorAll('.community .profile-card').forEach(card => {
+    card.setAttribute('data-profile-status', 'demo');
+    card.setAttribute('aria-label', '示例用户资料');
+    card.querySelectorAll('.photo-wrap span').forEach(status => { status.textContent = '示例'; });
+  });
+
+  const menuToggle = document.getElementById('menuToggle');
   if (!menuToggle || !mainNav) return;
 
   let backdrop = document.querySelector('.mobile-nav-backdrop');

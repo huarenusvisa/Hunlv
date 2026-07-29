@@ -1,6 +1,22 @@
 {
-  "generated_at": "2026-07-28T16:54:38.522423+00:00",
+  "generated_at": "2026-07-29T16:12:44.804290+00:00",
   "items": [
+    {
+      "id": "daily-2026-07-29-interview-prep",
+      "date": "2026-07-29",
+      "title": "婚姻绿卡面谈前应该怎样复核材料",
+      "category": "面谈准备",
+      "summary": "面谈前应把已递交表格与最新事实逐项对照，准备身份证明、关系原件、共同生活更新证据及通知要求的材料。双方应如实回答，不要背诵统一答案；发现旧表格存在错误时，应提前准备清楚、可信的说明。",
+      "key_points": [
+        "复印并熟悉已递交材料",
+        "带上通知要求的原件",
+        "事实变化要如实更新"
+      ],
+      "official_url": "https://www.uscis.gov/green-card/green-card-processes-and-procedures/adjustment-of-status",
+      "official": true,
+      "site": "华人婚姻绿卡网",
+      "disclaimer": "一般知识说明，不构成针对个人案件的法律意见。"
+    },
     {
       "id": "daily-2026-07-28-f2a-visa-bulletin",
       "date": "2026-07-28",

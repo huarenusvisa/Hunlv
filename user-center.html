@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>用户中心｜华人婚姻绿卡网</title>
+  <meta name="description" content="华人婚姻绿卡网用户注册、个人资料、照片授权、公开展示和隐私设置。">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="user-module.css?v=20260729-1">
+</head>
+<body>
+  <header class="user-header">
+    <a class="user-brand" href="index.html" aria-label="返回华人婚姻绿卡网首页">
+      <span class="user-brand-mark">缘</span>
+      <span><strong>华人婚姻绿卡网</strong><small>专业 · 高效 · 安心</small></span>
+    </a>
+    <nav aria-label="用户中心导航">
+      <a href="index.html">首页</a>
+      <a href="users.html">公开用户</a>
+      <a class="active" href="user-center.html">用户中心</a>
+    </nav>
+  </header>
+
+  <main class="user-shell">
+    <section class="user-intro">
+      <span class="user-kicker">本人注册 · 自主授权 · 可随时撤回</span>
+      <h1>创建您的交友资料</h1>
+      <p>只有年满18岁、本人提交并同意公开展示的资料，审核通过后才会出现在交友社区。请勿上传他人照片、证件号码、移民档案号码或其他敏感信息。</p>
+    </section>
+
+    <section class="user-layout">
+      <form class="profile-form" name="community-profile-application" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data">
+        <input type="hidden" name="form-name" value="community-profile-application">
+        <p class="hidden-field"><label>请勿填写：<input name="bot-field"></label></p>
+
+        <div class="form-section">
+          <div class="form-heading"><span>1</span><div><h2>账号与基本资料</h2><p>公开页面不会显示您的邮箱和电话。</p></div></div>
+          <div class="form-grid">
+            <label>邮箱<input type="email" name="email" autocomplete="email" required></label>
+            <label>手机号码（可选）<input type="tel" name="phone" autocomplete="tel"></label>
+            <label>公开昵称<input type="text" name="display_name" maxlength="30" required></label>
+            <label>出生日期<input type="date" name="birth_date" required></label>
+            <label>性别<select name="gender" required><option value="">请选择</option><option>女</option><option>男</option><option>其他/不公开</option></select></label>
+            <label>所在城市<input type="text" name="city" maxlength="60" placeholder="例如：New York, NY" required></label>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <div class="form-heading"><span>2</span><div><h2>公开资料</h2><p>这些内容会在审核通过后展示。</p></div></div>
+          <div class="form-grid">
+            <label>职业或行业<input type="text" name="occupation" maxlength="60"></label>
+            <label>婚姻状态<select name="marital_status"><option value="">请选择</option><option>未婚</option><option>离异</option><option>丧偶</option><option>不公开</option></select></label>
+            <label class="full">兴趣标签<input type="text" name="interests" maxlength="120" placeholder="例如：旅行、摄影、健身、阅读"></label>
+            <label class="full">自我介绍<textarea name="bio" rows="5" maxlength="800" placeholder="介绍您的生活、兴趣和希望认识的人。请勿填写证件号码、住址或财务信息。" required></textarea></label>
+            <label class="full">本人照片<input type="file" name="profile_photo" accept="image/jpeg,image/png,image/webp" required><small>建议正面清晰照片，最大10MB。不得上传他人照片、证件照或含儿童的照片。</small></label>
+          </div>
+        </div>
+
+        <div class="form-section consent-section">
+          <div class="form-heading"><span>3</span><div><h2>身份与展示授权</h2><p>以下项目必须全部确认。</p></div></div>
+          <label class="consent-row"><input type="checkbox" name="adult_confirmed" value="yes" required><span>我确认自己已年满18岁。</span></label>
+          <label class="consent-row"><input type="checkbox" name="identity_confirmed" value="yes" required><span>我确认提交的是本人真实资料，不冒用他人身份。</span></label>
+          <label class="consent-row"><input type="checkbox" name="photo_rights_confirmed" value="yes" required><span>我确认对上传照片拥有使用权，并授权华人婚姻绿卡网展示该照片。</span></label>
+          <label class="consent-row"><input type="checkbox" name="public_profile_consent" value="yes" required><span>我同意审核通过后公开展示昵称、年龄、城市、照片、兴趣和自我介绍。</span></label>
+          <label class="consent-row"><input type="checkbox" name="community_rules" value="yes" required><span>我同意遵守社区规则，不发布诈骗、虚假婚姻交易、骚扰、仇恨或违法内容。</span></label>
+          <input type="hidden" name="consent_version" value="2026-07-29-v1">
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="primary-action">提交审核</button>
+          <button type="reset" class="secondary-action">清空表格</button>
+        </div>
+        <p class="form-note">提交后资料状态为“待审核”。审核通过前不会公开。您可以通过注册邮箱申请隐藏、更正或删除全部资料。</p>
+      </form>
+
+      <aside class="user-side">
+        <div class="side-card">
+          <h2>审核流程</h2>
+          <ol>
+            <li><strong>提交资料</strong><span>完成基本信息和授权确认</span></li>
+            <li><strong>人工审核</strong><span>检查年龄、照片权利和社区安全</span></li>
+            <li><strong>公开展示</strong><span>仅显示您同意公开的字段</span></li>
+            <li><strong>自主控制</strong><span>随时隐藏、更正或删除资料</span></li>
+          </ol>
+        </div>
+        <div class="side-card safety-card">
+          <h2>安全提醒</h2>
+          <p>不要向陌生人提供社会安全号、A号码、护照、银行账户、精确住址或移民案件文件。</p>
+          <p>任何人要求付费结婚、购买身份或代收资金，都应立即停止联系并举报。</p>
+        </div>
+        <div class="side-card compact-actions">
+          <h2>资料管理</h2>
+          <a href="profile-request.html?action=hide">申请隐藏资料</a>
+          <a href="profile-request.html?action=edit">申请更正资料</a>
+          <a href="profile-request.html?action=delete">申请删除资料</a>
+          <a href="report-profile.html">举报用户资料</a>
+        </div>
+      </aside>
+    </section>
+  </main>
+</body>
+</html>

@@ -22,6 +22,41 @@
   if (loginHeading) loginHeading.textContent = `登录${siteName}`;
 
   const mainNav = document.getElementById('mainNav');
+  const contentRoutes = {
+    '婚绿知识': 'knowledge-center.html?category=婚绿知识',
+    '材料清单': 'knowledge-center.html?category=材料清单',
+    '模拟提交': 'knowledge-center.html?category=模拟提交',
+    '成功案例': 'knowledge-center.html?category=成功案例',
+    '常见问题': 'knowledge-center.html?category=常见问题'
+  };
+
+  if (mainNav) {
+    mainNav.querySelectorAll('a').forEach(link => {
+      const label = (link.textContent || '').trim();
+      if (contentRoutes[label]) link.href = contentRoutes[label];
+    });
+  }
+
+  document.querySelectorAll('.knowledge a').forEach(link => {
+    link.href = 'knowledge-center.html?category=婚绿知识';
+  });
+
+  const knowledgeSection = document.querySelector('.knowledge');
+  if (knowledgeSection && !knowledgeSection.querySelector('.auto-publish-note')) {
+    const style = document.createElement('style');
+    style.textContent = `
+      .auto-publish-note{display:flex;align-items:center;justify-content:space-between;gap:18px;margin:0 0 22px;padding:16px 18px;border:1px solid #e8c47d;border-radius:16px;background:#fffaf0;color:#5c4b2d}
+      .auto-publish-note strong{color:#0d4b40;font-size:18px}.auto-publish-note span{color:#8a7652}.auto-publish-note a{flex:0 0 auto;text-decoration:none;color:#fff!important;background:#0d4b40;border-radius:10px;padding:10px 15px;font-weight:700}
+      @media(max-width:760px){.auto-publish-note{align-items:flex-start;flex-direction:column}.auto-publish-note a{width:100%;text-align:center}}
+    `;
+    document.head.appendChild(style);
+    const note = document.createElement('div');
+    note.className = 'auto-publish-note';
+    note.innerHTML = '<div><strong>今日自动发布 150 条婚绿内容</strong><br><span>婚绿知识、材料清单、模拟提交、成功案例、常见问题，每类30条，无需人工审核。</span></div><a href="knowledge-center.html">进入自动内容中心 →</a>';
+    const grid = knowledgeSection.querySelector('.knowledge-grid');
+    if (grid) knowledgeSection.insertBefore(note, grid);
+  }
+
   if (mainNav && !mainNav.querySelector('a[href="user-center.html"]')) {
     const userLink = document.createElement('a');
     userLink.href = 'user-center.html';

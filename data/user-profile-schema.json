@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Huaren Hunlv Community Profile",
+  "type": "object",
+  "required": [
+    "profile_id",
+    "display_name",
+    "birth_date",
+    "city",
+    "adult_confirmed",
+    "identity_confirmed",
+    "photo_rights_confirmed",
+    "public_profile_consent",
+    "consent_version",
+    "moderation_status",
+    "visibility"
+  ],
+  "properties": {
+    "profile_id": {"type": "string"},
+    "account_id": {"type": "string"},
+    "email": {"type": "string", "format": "email"},
+    "phone": {"type": "string"},
+    "display_name": {"type": "string", "maxLength": 30},
+    "birth_date": {"type": "string", "format": "date"},
+    "gender": {"type": "string"},
+    "city": {"type": "string", "maxLength": 60},
+    "occupation": {"type": "string", "maxLength": 60},
+    "marital_status": {"type": "string"},
+    "interests": {"type": "array", "items": {"type": "string"}, "maxItems": 12},
+    "bio": {"type": "string", "maxLength": 800},
+    "photo_url": {"type": "string"},
+    "adult_confirmed": {"const": true},
+    "identity_confirmed": {"const": true},
+    "photo_rights_confirmed": {"const": true},
+    "public_profile_consent": {"const": true},
+    "consent_version": {"type": "string"},
+    "consent_time": {"type": "string", "format": "date-time"},
+    "moderation_status": {"enum": ["pending", "approved", "rejected", "suspended"]},
+    "visibility": {"enum": ["private", "public", "hidden", "deleted"]},
+    "created_at": {"type": "string", "format": "date-time"},
+    "updated_at": {"type": "string", "format": "date-time"}
+  }
+}

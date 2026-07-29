@@ -25,9 +25,35 @@
   background: rgba(255, 252, 244, .92) !important;
 }
 
+.community-demo-notice {
+  margin: -4px 0 12px;
+  padding: 9px 12px;
+  border: 1px solid var(--warm-border-light);
+  border-radius: 10px;
+  background: rgba(255, 250, 240, .96);
+  color: #7c602f;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
 .profile-card {
   border-color: var(--warm-border-light) !important;
   box-shadow: 0 8px 22px rgba(116, 79, 25, .07) !important;
+}
+
+.profile-card[data-profile-status="demo"] .photo-wrap:after {
+  content: "示例资料";
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  z-index: 2;
+  padding: 4px 7px;
+  border-radius: 999px;
+  background: rgba(255, 250, 240, .94);
+  color: #7c602f;
+  border: 1px solid var(--warm-border-soft);
+  font-size: 10px;
+  font-weight: 700;
 }
 
 @media (hover: hover) {

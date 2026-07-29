@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>账号与资料中心｜华人婚姻绿卡网</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="user-module.css">
+  <style>
+    .account-shell{width:min(1080px,calc(100% - 32px));margin:34px auto 70px}.account-grid{display:grid;grid-template-columns:360px 1fr;gap:22px}.account-card{border:1px solid rgba(212,162,76,.62);border-radius:20px;background:#fff;padding:24px}.account-card h2{margin:0 0 8px}.account-card p{color:#66736f}.account-card label{display:block;margin:14px 0 6px;font-weight:700}.account-card input,.account-card select,.account-card textarea{width:100%;box-sizing:border-box;border:1px solid #d9c6a4;border-radius:11px;padding:11px 12px;font:inherit}.account-card textarea{min-height:110px;resize:vertical}.account-card button{margin-top:16px;width:100%;min-height:45px;border:0;border-radius:11px;background:#07594d;color:#fff;font-weight:800}.auth-status{margin-bottom:18px;border-radius:12px;padding:12px 14px;background:#f7f2e8}.auth-status[data-type="success"]{background:#e7f5ef;color:#07594d}.auth-status[data-type="error"]{background:#fff0f0;color:#9b2828}.auth-status[data-type="warning"]{background:#fff8e6;color:#805d16}.auth-only{display:none}.is-authenticated .auth-only{display:block}.is-authenticated .guest-only{display:none}.checks{display:grid;gap:10px;margin-top:16px}.checks label{display:flex;gap:9px;align-items:flex-start;margin:0;font-weight:500}.checks input{width:auto;margin-top:4px}.avatar-row{display:flex;gap:16px;align-items:center}.avatar-row img{width:92px;height:110px;object-fit:cover;border-radius:14px;border:1px solid #d4a24c;background:#f5efe5}.status-line{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid #eee3d2}.secondary{background:#fff!important;color:#07594d!important;border:1px solid #d4a24c!important}@media(max-width:800px){.account-grid{grid-template-columns:1fr}.account-shell{margin-top:18px}}
+  </style>
+</head>
+<body class="is-anonymous">
+  <header class="site-header"><div class="header-inner"><a class="brand" href="index.html"><span class="brand-mark">缘</span><span><strong>华人婚姻绿卡网</strong><small>专业・高效・安心</small></span></a><nav class="main-nav"><a href="index.html">首页</a><a href="users.html">交友社区</a><a class="active" href="account.html">账号中心</a></nav></div></header>
+  <main class="account-shell">
+    <h1>账号与资料中心</h1>
+    <p>注册、验证邮箱、填写本人资料并提交管理员审核。审核通过前不会公开展示。</p>
+    <div class="auth-status" data-auth-status aria-live="polite">正在检查账号系统…</div>
+    <div class="account-grid">
+      <aside>
+        <section class="account-card guest-only">
+          <h2>注册账号</h2>
+          <form id="signUpForm">
+            <label for="signupEmail">邮箱</label><input id="signupEmail" name="email" type="email" required autocomplete="email">
+            <label for="signupPassword">密码</label><input id="signupPassword" name="password" type="password" minlength="8" required autocomplete="new-password">
+            <button type="submit">注册并发送验证邮件</button>
+          </form>
+        </section>
+        <section class="account-card guest-only" style="margin-top:18px">
+          <h2>登录</h2>
+          <form id="signInForm">
+            <label for="signinEmail">邮箱</label><input id="signinEmail" name="email" type="email" required autocomplete="email">
+            <label for="signinPassword">密码</label><input id="signinPassword" name="password" type="password" required autocomplete="current-password">
+            <button type="submit">登录</button>
+          </form>
+        </section>
+        <section class="account-card auth-only">
+          <h2>当前账号</h2>
+          <div class="status-line"><span>邮箱</span><strong data-user-email></strong></div>
+          <div class="status-line"><span>审核状态</span><strong data-moderation-status>尚未提交</strong></div>
+          <button id="signOutButton" class="secondary" type="button">退出登录</button>
+        </section>
+      </aside>
+      <section class="account-card auth-only">
+        <h2>我的公开资料</h2>
+        <p>所有资料必须属于本人。提交后状态变为“待审核”，管理员批准后才会出现在公开用户列表。</p>
+        <form id="profileForm">
+          <div class="avatar-row"><img id="avatarPreview" alt="头像预览"><div><label for="avatar">本人照片</label><input id="avatar" name="avatar" type="file" accept="image/*"><input name="existing_avatar_url" type="hidden"><small>图片不超过5MB。</small></div></div>
+          <label for="displayName">公开昵称</label><input id="displayName" name="display_name" minlength="2" maxlength="40" required>
+          <label for="birthDate">出生日期</label><input id="birthDate" name="birth_date" type="date" required>
+          <label for="gender">性别</label><select id="gender" name="gender" required><option value="female">女</option><option value="male">男</option><option value="nonbinary">其他</option><option value="private">暂不公开</option></select>
+          <label for="city">城市</label><input id="city" name="city" required>
+          <label for="state">州</label><input id="state" name="state">
+          <label for="occupation">职业</label><input id="occupation" name="occupation">
+          <label for="interests">兴趣标签</label><input id="interests" name="interests" placeholder="旅行，摄影，电影">
+          <label for="bio">自我介绍</label><textarea id="bio" name="bio" maxlength="1000"></textarea>
+          <div class="checks">
+            <label><input name="adult_confirmed" type="checkbox" required>我确认已年满18岁。</label>
+            <label><input name="identity_confirmed" type="checkbox" required>我确认资料描述的是本人，不冒用他人身份。</label>
+            <label><input name="photo_rights_confirmed" type="checkbox" required>我确认有权使用上传的照片。</label>
+            <label><input name="public_consent" type="checkbox" required>我授权华人婚姻绿卡网在审核通过后公开展示这些资料。</label>
+          </div>
+          <button type="submit">保存并提交审核</button>
+        </form>
+      </section>
+      <section class="account-card guest-only">
+        <h2>安全与审核规则</h2>
+        <p>账号系统启用后，用户必须先验证邮箱。公开资料需要管理员审核；未成年人、盗图、虚假资料、骚扰和垃圾推广将被拒绝或删除。</p>
+        <p>密码由认证服务处理，网站前端不会保存明文密码。</p>
+      </section>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.52.1/dist/umd/supabase.min.js"></script>
+  <script src="supabase-config.js"></script>
+  <script src="user-auth.js"></script>
+</body>
+</html>

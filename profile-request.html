@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>资料管理申请｜华人婚姻绿卡网</title><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="user-module.css?v=20260729-1"></head><body>
+<header class="user-header"><a class="user-brand" href="index.html"><span class="user-brand-mark">缘</span><span><strong>华人婚姻绿卡网</strong><small>专业 · 高效 · 安心</small></span></a><nav><a href="index.html">首页</a><a href="users.html">公开用户</a><a class="active" href="user-center.html">用户中心</a></nav></header>
+<main class="user-shell"><section class="request-card"><h1>资料管理申请</h1><p>您可以申请隐藏、更正或删除自己提交的交友资料。为防止他人冒用，我们会通过原注册邮箱核验。</p>
+<form name="profile-privacy-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="request-card" style="border:0;padding:0;margin:0;box-shadow:none">
+<input type="hidden" name="form-name" value="profile-privacy-request"><p class="hidden-field"><label>请勿填写<input name="bot-field"></label></p>
+<label>申请类型<select name="request_type" id="requestType" required><option value="">请选择</option><option value="hide">隐藏资料</option><option value="edit">更正资料</option><option value="delete">永久删除资料</option><option value="data-copy">索取本人资料副本</option></select></label>
+<label>注册邮箱<input type="email" name="email" required></label><label>公开昵称或资料编号<input type="text" name="profile_reference" required></label><label>申请说明<textarea name="details" rows="5" maxlength="1000" required></textarea></label>
+<div class="legal-note">删除申请核验通过后，我们将从公开页面、活动列表和可公开缓存中移除资料。依法必须保留的安全、投诉或交易记录将按适用期限限制访问保存。</div><button class="primary-action" type="submit">提交申请</button></form></section></main>
+<script>const p=new URLSearchParams(location.search).get('action');if(p){const s=document.getElementById('requestType');if([...s.options].some(o=>o.value===p))s.value=p;}</script></body></html>
